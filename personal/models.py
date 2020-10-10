@@ -22,9 +22,8 @@ class Reviews(models.Model):
     def __str__(self):
         return self.product_name
     def save(self, *args, **kwargs):
-        if not self.id:
-            self.slug = slugify(self.product_name)
-        super(Gadget, self).save(*args, **kwargs)
+        self.slug = slugify(self.product_name)
+        super(Reviews, self).save(*args, **kwargs)
 
 class Sentence(models.Model):
 
