@@ -16,7 +16,7 @@ class Reviews(models.Model):
     rating = models.CharField(max_length=3,blank=True)
     title = models.CharField(max_length=50)
     reviewer = models.CharField(max_length=150)
-    review_text = models.CharField(max_length=50)
+    review_text = models.CharField(max_length=1000)
     Class = models.TextField()
     def __str__(self):
         return self.product_name
