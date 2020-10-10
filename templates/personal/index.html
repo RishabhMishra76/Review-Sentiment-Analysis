@@ -1,0 +1,602 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+      {% load static %}
+    <title>Review Classification</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="{% static 'vendor/bootstrap/css/bootstrap.min.css' %}"  rel="stylesheet">
+
+    <!-- Custom fonts for this template -->
+    <link href="{% static 'vendor/font-awesome/css/font-awesome.min.css' %}" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet" type="text/css">
+
+    <!-- Plugin CSS -->
+    <link href="{% static 'vendor/magnific-popup/magnific-popup.css'%}" rel="stylesheet" type="text/css">
+
+    <!-- Custom styles for this template -->
+    <link href="{% static 'css/freelancer.css'%}" rel="stylesheet">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  </head>
+
+  <body id="page-top">
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg bg-secondary fixed-top text-uppercase" id="mainNav">
+      <div class="container">
+        <a class="navbar-brand js-scroll-trigger" href="#page-top">Review Classification</a>
+        <button class="navbar-toggler navbar-toggler-right text-uppercase bg-primary text-white rounded" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+          Menu
+          <i class="fa fa-bars"></i>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item mx-0 mx-lg-1">
+              <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="#portfolio">Tools</a>
+            </li>
+            <li class="nav-item mx-0 mx-lg-1">
+              <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="#about">About</a>
+            </li>
+            <li class="nav-item mx-0 mx-lg-1">
+              <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="#contact">Prediction</a>
+            </li>
+            <li class="nav-item mx-0 mx-lg-1">
+              <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="#neg">Neg Review</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Header -->
+    <header class="masthead bg-primary text-white text-center">
+      <div class="container">
+        <img class="img-fluid mb-5 d-block mx-auto" src="{% static 'img/amazon1.png' %}" alt="">
+        <h2 class="text-uppercase mb-0">Opinion Review Classification trained on amazon product reviews</h2>
+        <hr class="star-light">
+        <h4 class="font-weight-light mb-0">Deep Learning - Neural Networks - LSTM - Machine Learning - Sentiment Analysis</h4>
+      </div>
+    </header>
+
+    <!-- Portfolio Grid Section -->
+    <section class="portfolio" id="portfolio">
+      <div class="container">
+        <h2 class="text-center text-uppercase text-secondary mb-0">Tools Used</h2>
+        <hr class="star-dark mb-5">
+        <div class="row">
+          <div class="col-md-6 col-lg-4">
+            <a class="portfolio-item d-block mx-auto" href="#portfolio-modal-1">
+              <div class="portfolio-item-caption d-flex position-absolute h-100 w-100">
+                <div class="portfolio-item-caption-content my-auto w-100 text-center text-white">
+                  <i class="fa fa-search-plus fa-3x"></i>
+                </div>
+              </div>
+              <img class="img-fluid"  src="{% static 'img/portfolio/ecosys.png'%}" alt="">
+            </a>
+          </div>
+          <div class="col-md-6 col-lg-4">
+            <a class="portfolio-item d-block mx-auto" href="#portfolio-modal-2">
+              <div class="portfolio-item-caption d-flex position-absolute h-100 w-100">
+                <div class="portfolio-item-caption-content my-auto w-100 text-center text-white">
+                  <i class="fa fa-search-plus fa-3x"></i>
+                </div>
+              </div>
+              <img class="img-fluid"  src="{% static 'img/portfolio/NLTK.jpg'%}" alt="" >
+            </a>
+          </div>
+          <div class="col-md-6 col-lg-4">
+            <a class="portfolio-item d-block mx-auto" href="#portfolio-modal-3">
+              <div class="portfolio-item-caption d-flex position-absolute h-100 w-100">
+                <div class="portfolio-item-caption-content my-auto w-100 text-center text-white">
+                  <i class="fa fa-search-plus fa-3x"></i>
+                </div>
+              </div>
+              <img class="img-fluid" src="{% static 'img/portfolio/Word2vec.png'%}" alt="">
+            </a>
+          </div>
+          <div class="col-md-6 col-lg-4">
+            <a class="portfolio-item d-block mx-auto" href="#portfolio-modal-4">
+              <div class="portfolio-item-caption d-flex position-absolute h-100 w-100">
+                <div class="portfolio-item-caption-content my-auto w-100 text-center text-white">
+                  <i class="fa fa-search-plus fa-3x"></i>
+                </div>
+              </div>
+              <img class="img-fluid" src="{% static 'img/portfolio/sklearn.png'%}" alt="">
+            </a>
+          </div>
+          <div class="col-md-6 col-lg-4">
+            <a class="portfolio-item d-block mx-auto" href="#portfolio-modal-5">
+              <div class="portfolio-item-caption d-flex position-absolute h-100 w-100">
+                <div class="portfolio-item-caption-content my-auto w-100 text-center text-white">
+                  <i class="fa fa-search-plus fa-3x"></i>
+                </div>
+              </div>
+              <img class="img-fluid" src="{% static 'img/portfolio/keras.png'%}" alt="">
+            </a>
+          </div>
+          <div class="col-md-6 col-lg-4">
+            <a class="portfolio-item d-block mx-auto" href="#portfolio-modal-6">
+              <div class="portfolio-item-caption d-flex position-absolute h-100 w-100">
+                <div class="portfolio-item-caption-content my-auto w-100 text-center text-white">
+                  <i class="fa fa-search-plus fa-3x"></i>
+                </div>
+              </div>
+              <img class="img-fluid" src="{% static 'img/portfolio/LSTM.png'%} " alt="">
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- About Section -->
+    <section class="bg-primary text-white mb-0" id="about">
+      <div class="container">
+        <h2 class="text-center text-uppercase text-white">About</h2>
+        <hr class="star-light mb-5">
+        <div class="row">
+
+            <p class="lead">NLP With python,NLTK,gensim(Word2vec),tensorflow,Keras(LSTM) for Sentiment analysis amazon Products Reviews Data  From the Multi-Domain Sentiment Dataset.</p>
+          </div>
+        </div>
+        <div class="text-center mt-4">
+          <a class="btn btn-xl btn-outline-light" href="http://www.cs.jhu.edu/~mdredze/datasets/sentiment/unprocessed.tar.gz">
+            <i class="fa fa-download mr-2"></i>
+            Download Dataset Now!
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact">
+      <div class="container">
+        <h2 class="text-center text-uppercase text-secondary mb-0">Prediction</h2>
+        <hr class="star-dark mb-5">
+        <div class="row">
+          <div class="col-lg-12 mx-auto">
+            <!-- To configure the contact form email address, go to mail/contact_me.php and update the email address in the PHP file on line 19. -->
+            <!-- The form should work on most web servers, but if the form is not working you may need to configure your web server differently. -->
+            {% block content %}
+            <form id="myform" novalidate="novalidate">
+              <div class="container">
+              <div class="row">
+              <div class="control-group col-11">
+                <div class="form-group floating-label-form-group controls mb-0 pb-2">
+                  <label>Text Input</label>
+                  <textarea class="form-control" name="Text" id="Text" rows="5" placeholder="Enter Review" required="required" data-validation-required-message="Please enter a message."></textarea>
+                  <p class="help-block text-danger"></p>
+                </div>
+              </div>
+
+              <div class="form-group  col-1">
+              <br>
+            <div style="padding-left : 30px;">
+                <h6 class="text-center text-uppercase text-secondary mb-0">Result
+                  {% if prediction == None %}
+                      <span class="btn btn-light btn-lg" id="prediction" style="color:#808080;background: rgba(0, 0, 0, 0);border-color: rgba(0, 0, 0, 0);">0 %</span>
+                  {% else %}
+                      <span class="btn btn-light btn-lg" id="prediction" >{{ prediction }}</span>
+                  {% endif %}
+                </h6>
+              </div>
+              <div>
+                  <button class="btn btn-md btn-outline-primary btn-block" id="load" style="width: 140px"><i class="fa fa-paper-plane-o mr-2"></i> Load Sample </button>
+                  <button class="btn btn-md btn-outline-primary btn-block" id="clear" style="width: 140px"> <i class="fa fa-trash-o mr-2"></i>Clear </button>
+              </div>
+              </div>
+            </div>
+            </div>
+            </form>
+
+    <script>
+        var inputElem = document.createElement('input');
+var x = document.getElementById("Text");
+inputElem.type = 'hidden';
+inputElem.name = 'csrfmiddlewaretoken';
+inputElem.value = '{{ csrf_token }}';
+// Clear Text
+document.getElementById('clear').addEventListener('click', function (e) {
+    e.preventDefault();
+    $("#Text").val('');
+    $('#prediction').html('0 %');
+    $('#prediction').css('color', '#808080');
+}
+);
+sample = "I bought two pairs of wipers just over a year ago, expecting I'd have the second pair as backup. I haven't needed the second pair - the first pair are still just like new - they don't squeak, chatter, or smear and are great for visibility. "
+//Load Sample
+document.getElementById('load').addEventListener('click', function (e) {
+    e.preventDefault();
+    $("#Text").val(sample);
+    $('#prediction').html('82 %');
+    $('#prediction').css('color', "#00FA9A");
+}
+);
+function getCookie(c_name)
+{
+    if (document.cookie.length > 0)
+    {
+        c_start = document.cookie.indexOf(c_name + "=");
+        if (c_start != -1)
+        {
+            c_start = c_start + c_name.length + 1;
+            c_end = document.cookie.indexOf(";", c_start);
+            if (c_end == -1) c_end = document.cookie.length;
+            return unescape(document.cookie.substring(c_start,c_end));
+        }
+    }
+    return "";
+ }
+
+
+$("#Text").keydown(function(e){
+    if (e.keyCode == "32") {
+        // information to be sent to the server
+    var Text = $("#Text").val();
+
+    $.ajax({
+        headers: { "X-CSRFToken": getCookie("csrftoken") },
+        type: "POST",
+        url: '/predict/',
+        data: {Text: Text},
+        success: function (data) {
+        classe = "btn btn-primary btn-xl";
+        color = "#00FA9A"
+            var result = $('<div />').append(data).find('#prediction').html();
+            //$('#prediction').html(parseInt(result)+' %');
+            if (parseInt(result) < 50) {
+              var x =(50-parseInt(result))*2;
+              $('#prediction').html(x+' %');
+            color = "Red"
+
+        }
+        if (parseInt(result) >= 50) {
+          var x =(parseInt(result)-50)*2;
+              $('#prediction').html(x+' %');
+            color = "#00FA9A"
+        }
+      //  $('#prediction').attr('class', classe);
+            $('#prediction').css('color', color);
+        },
+        error: function (xhr, status) {
+ //           $('#prediction').html('50 %');
+
+        }
+    });
+
+
+   }
+
+
+});
+
+</script>
+{% endblock %}
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Negative Review Section -->
+    <section class="bg-primary text-white mb-0" id="neg">
+      <div class="container">
+        <h2 class="text-center text-uppercase text-white">Negative Review</h2>
+        <hr class="star-light mb-5">
+        <div class="row">
+          <div class="col-lg-12 mx-auto">
+            <!-- To configure the contact form email address, go to mail/contact_me.php and update the email address in the PHP file on line 19. -->
+            <!-- The form should work on most web servers, but if the form is not working you may need to configure your web server differently. -->
+            {% block display %}
+            <form method="POST" class="form-inline" enctype="multipart/form-data" action="">
+            {% csrf_token %}
+            <div class="container">
+              <div class="row">
+                <div class="control-group col-11">
+                  <div class="form-group floating-label-form-group controls mb-0 pb-2">
+                    <div class="file-field input-field">
+                      <div class="btn">
+                        <h6 class="text-center text-uppercase text-secondary mb-0">Upload a CSV FILE</h6>
+                        <input type="file" name="file">
+                      </div>
+                      <div class="file-path-wrapper">
+                        <input class="file-path validate" type="text">
+                      </div>
+                      <button class="btn btn-md btn-outline-primary btn-block" style="width: 140px"> <i class="fa fa-trash-o mr-2"></i>Upload </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <form id="myform" novalidate="novalidate">
+              <div class="container">
+              <div class="row">
+              <div class="control-group col-11">
+                <div class="form-group floating-label-form-group controls mb-0 pb-2">
+                  <label>Text Input</label>
+                  <textarea class="form-control" name="Text" id="Text" rows="5" placeholder="Enter Review" required="required" data-validation-required-message="Please enter a message."></textarea>
+                  <p class="help-block text-danger"></p>
+                </div>
+              </div>
+
+              <div class="form-group  col-1">
+              <br>
+            <div style="padding-left : 30px;">
+                <h6 class="text-center text-uppercase text-secondary mb-0">Result
+                  {% if prediction == None %}
+                      <span class="btn btn-light btn-lg" id="prediction" style="color:#808080;background: rgba(0, 0, 0, 0);border-color: rgba(0, 0, 0, 0);">0 %</span>
+                  {% else %}
+                      <span class="btn btn-light btn-lg" id="prediction" >{{ prediction }}</span>
+                  {% endif %}
+                </h6>
+              </div>
+              <div>
+                  <button class="btn btn-md btn-outline-primary btn-block" id="load" style="width: 140px"><i class="fa fa-paper-plane-o mr-2"></i> Load Sample </button>
+                  <button class="btn btn-md btn-outline-primary btn-block" id="clear" style="width: 140px"> <i class="fa fa-trash-o mr-2"></i>Clear </button>
+              </div>
+              </div>
+            </div>
+            </div>
+            </form>
+
+            {% endblock %}
+          </div>
+        </div>
+        </div>
+        <div class="text-center mt-4">
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    
+    <footer class="footer text-center">
+      <div class="container">
+        <div class="row">
+
+          <div class="col-md-6 mb-5 mb-lg-0">
+            <h4 class="text-uppercase mb-4">Around the Web</h4>
+            <ul class="list-inline mb-0">
+                <li class="list-inline-item">
+                <a class="btn btn-outline-light btn-social text-center rounded-circle" href="https://github.com/RishabhMishra76">
+                  <i class="fa fa-fw fa-github"></i>
+                </a>
+              </li>
+              <li class="list-inline-item">
+                <a class="btn btn-outline-light btn-social text-center rounded-circle" href="https://twitter.com/urwithrishabh">
+                  <i class="fa fa-fw fa-twitter"></i>
+                </a>
+              </li>
+              <li class="list-inline-item">
+                <a class="btn btn-outline-light btn-social text-center rounded-circle" href="https://www.linkedin.com/in/rishabh-mishra-81397b152/">
+                  <i class="fa fa-fw fa-linkedin"></i>
+                </a>
+              </li>
+            </ul>
+          </div>
+          <div class="col-md-6">
+            <h4 class="text-uppercase mb-4">About Us</h4>
+            <p class="lead mb-0">We are Computer Science and Engineering Students and Deep Learning Enthusiast. You can find our work on
+              <a href="https://github.com/RishabhMishra76">Github</a>.</p>
+          </div>
+        </div>
+      </div>
+    </footer>
+  
+
+
+    <!-- Scroll to Top Button (Only visible on small and extra-small screen sizes) -->
+    <div class="scroll-to-top d-lg-none position-fixed ">
+      <a class="js-scroll-trigger d-block text-center text-white rounded" href="#page-top">
+        <i class="fa fa-chevron-up"></i>
+      </a>
+    </div>
+
+    <!-- Portfolio Modals -->
+
+    <!-- Portfolio Modal 1 -->
+    <div class="portfolio-modal mfp-hide" id="portfolio-modal-1">
+      <div class="portfolio-modal-dialog bg-white">
+        <a class="close-button d-none d-md-block portfolio-modal-dismiss" href="#">
+          <i class="fa fa-3x fa-times"></i>
+        </a>
+        <div class="container text-center">
+          <div class="row">
+            <div class="col-lg-8 mx-auto">
+              <h2 class="text-secondary text-uppercase mb-0">Python scientific stack</h2>
+              <hr class="star-dark mb-5">
+              <img class="img-fluid mb-5" src="{% static 'img/portfolio/ecosys.png'%}" alt="">
+              <p class="mb-5">With python packages such as Numpy, pandas, scipy, Seaborn and matplotlib for plotting, Jupyter notebook for better interactive development experience the first steps of the project that consist on the data preparation and cleaning,
+                  better understanding of data with statistical tools and the generation of processed data were done,Link To jupyter notebook:
+                    <a href="https://github.com/RishabhMishra76/Sentiment-Analysis-on-Amazon-Reviews/blob/master/Deep_Learning_LSTM.ipynb">SentimentAnalysisAmazon</a>
+              </p>
+              <a class="btn btn-primary btn-lg rounded-pill portfolio-modal-dismiss" href="#">
+                <i class="fa fa-close"></i>
+                Close</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Portfolio Modal 2 -->
+    <div class="portfolio-modal mfp-hide" id="portfolio-modal-2">
+      <div class="portfolio-modal-dialog bg-white">
+        <a class="close-button d-none d-md-block portfolio-modal-dismiss" href="#">
+          <i class="fa fa-3x fa-times"></i>
+        </a>
+        <div class="container text-center">
+          <div class="row">
+            <div class="col-lg-8 mx-auto">
+              <h2 class="text-secondary text-uppercase mb-0">NLP With NLTK</h2>
+              <hr class="star-dark mb-5">
+              <img class="img-fluid mb-5" src="{% static 'img/portfolio/NLTK.jpg'%}" alt="">
+              <p class="mb-5">The power of NLTK is that it gives you some out of the box tools for text processing for many tasks like sentiment analysis
+              ,spam filtering,document categorization and many other cool stuff ,with built in functions like tokenize,tagging for speech,stop words lists and many included corpora
+              ,NLTK is the way to go for text data processing</p>
+              <a class="btn btn-primary btn-lg rounded-pill portfolio-modal-dismiss" href="#">
+                <i class="fa fa-close"></i>
+                Close</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Portfolio Modal 3 -->
+    <div class="portfolio-modal mfp-hide" id="portfolio-modal-3">
+      <div class="portfolio-modal-dialog bg-white">
+        <a class="close-button d-none d-md-block portfolio-modal-dismiss" href="#">
+          <i class="fa fa-3x fa-times"></i>
+        </a>
+        <div class="container text-center">
+          <div class="row">
+            <div class="col-lg-8 mx-auto">
+              <h2 class="text-secondary text-uppercase mb-0">Word embeddings gensim(Word2Vec)</h2>
+              <hr class="star-dark mb-5">
+              <img class="img-fluid mb-5" src="{% static 'img/portfolio/Word2vec.png'%}" alt="">
+              <p class="mb-5">Image and audio processing systems work with rich, high-dimensional datasets encoded as vectors of the individual raw pixel-intensities for image data, or e.g. power spectral density coefficients for audio data. For tasks like object or speech recognition we know that all the information required to successfully perform the task is encoded in the data (because humans can perform these tasks from the raw data). However, natural language processing systems traditionally treat words as discrete atomic symbols, and therefore 'cat' may be represented as Id537 and 'dog' as Id143. These encodings are arbitrary, and provide no useful information to the system regarding the relationships that may exist between the individual symbols. This means that the model can leverage very little of what it has learned about 'cats' when it is processing data about 'dogs' (such that they are both animals, four-legged, pets, etc.). Representing words as unique, discrete ids furthermore leads to data sparsity, and usually means that we may need more data in order to successfully train statistical models. Using vector representations can overcome some of these obstacles.
+              With Word2Vec we can encode every word in our corpus into smaller,and more meaningful vector representation,that how we can say
+              2 words vectors are similar in this link you will find out more about word2vec algorithme and how to evaluate the results :
+                                  <a href="https://github.com/RishabhMishra76/Sentiment-Analysis-on-Amazon-Reviews/blob/master/Word_Embedding.ipynb">WordEmbedding</a>
+</p>
+              <a class="btn btn-primary btn-lg rounded-pill portfolio-modal-dismiss" href="#">
+                <i class="fa fa-close"></i>
+                Close</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Portfolio Modal 4 -->
+    <div class="portfolio-modal mfp-hide" id="portfolio-modal-4">
+      <div class="portfolio-modal-dialog bg-white">
+        <a class="close-button d-none d-md-block portfolio-modal-dismiss" href="#">
+          <i class="fa fa-3x fa-times"></i>
+        </a>
+        <div class="container text-center">
+          <div class="row">
+            <div class="col-lg-8 mx-auto">
+              <h2 class="text-secondary text-uppercase mb-0">Machine Learning models</h2>
+              <hr class="star-dark mb-5">
+              <img class="img-fluid mb-5" src="{% static 'img/portfolio/sklearn.png'%}" alt="">
+              <p class="mb-5">sklearn is a package built on top of NumPy, SciPy, and matplotlib ,it's amazing how easy you can implement very complex concepts
+              of supervised machine learning with it ,sklearn gives you the possibilty to try many algorithmes such as svm,knn,logestic regression ,CART's and other machine learning alogirthme
+              that gives you very good result in our case we used these alogrithme to try to classifiy amazon reiews on 25 product into tow classe positif and negatif ,it gave very good result
+              this notebook explain it all Link :                                  <a href="https://github.com/RishabhMishra76/Sentiment-Analysis-on-Amazon-Reviews/blob/master/ML_Classification.ipynb">Sentiment Classification</a>
+</p>
+              <a class="btn btn-primary btn-lg rounded-pill portfolio-modal-dismiss" href="#">
+                <i class="fa fa-close"></i>
+                Close </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Portfolio Modal 5 -->
+    <div class="portfolio-modal mfp-hide" id="portfolio-modal-5">
+      <div class="portfolio-modal-dialog bg-white">
+        <a class="close-button d-none d-md-block portfolio-modal-dismiss" href="#">
+          <i class="fa fa-3x fa-times"></i>
+        </a>
+        <div class="container text-center">
+          <div class="row">
+            <div class="col-lg-8 mx-auto">
+              <h2 class="text-secondary text-uppercase mb-0">Deep Learning With Keras</h2>
+              <hr class="star-dark mb-5">
+              <img class="img-fluid mb-5" src="{% static 'img/portfolio/keras.png'%}" alt="">
+              <p class="mb-5">If you want to quickly build and test a neural network with minimal lines of code,
+                  choose Keras. With Keras backend tensorflow or theano, you can build simple or very complex neural networks within a few minutes.
+                  The Model and the Sequential APIs are so powerful that you can do almost everything you may want from LSTM,GRU Cells in RNN's to Convolutional and pooling layers in CNN's keras is now
+                  the leading deep learning framework .
+                  </p>
+              <a class="btn btn-primary btn-lg rounded-pill portfolio-modal-dismiss" href="#">
+                <i class="fa fa-close"></i>
+                Close</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Portfolio Modal 6 -->
+    <div class="portfolio-modal mfp-hide" id="portfolio-modal-6">
+      <div class="portfolio-modal-dialog bg-white">
+        <a class="close-button d-none d-md-block portfolio-modal-dismiss" href="#">
+          <i class="fa fa-3x fa-times"></i>
+        </a>
+        <div class="container text-center">
+          <div class="row">
+            <div class="col-lg-8 mx-auto">
+              <h2 class="text-secondary text-uppercase mb-0">Long-short-Term-Memory (LSTM)</h2>
+              <hr class="star-dark mb-5">
+              <img class="img-fluid mb-5" src="{% static 'img/portfolio/LSTM.png'%}" alt="">
+              <p class="mb-5">Long short-term memory (LSTM) is an artificial recurrent neural network (RNN) architecture used in the field of deep learning.
+                Unlike standard feedforward neural networks, LSTM has feedback connections.
+                LSTMs were developed to deal with the vanishing gradient problem that can be encountered when training traditional RNNs.
+                 Relative insensitivity to gap length is an advantage of LSTM over RNNs, hidden Markov models and other sequence learning methods in numerous applications.
+              </p>
+              <a class="btn btn-primary btn-lg rounded-pill portfolio-modal-dismiss" href="#">
+                <i class="fa fa-close"></i>
+                Close Project</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Bootstrap core JavaScript -->
+    <script src="{% static 'vendor/jquery/jquery.min.js'%}"></script>
+    <script src="{% static 'vendor/bootstrap/js/bootstrap.bundle.min.js'%}"></script>
+
+    <!-- Plugin JavaScript -->
+    <script src="{% static 'vendor/jquery-easing/jquery.easing.min.js'%}"></script>
+    <script src="{% static 'vendor/magnific-popup/jquery.magnific-popup.min.js'%}"></script>
+
+    <!-- Contact Form JavaScript -->
+    <script src="{% static 'js/jqBootstrapValidation.js'%}"></script>
+    <script src="{% static 'js/contact_me.js'%}"></script>
+
+    <!-- Custom scripts for this template -->
+    <script src="{% static 'js/freelancer.min.js'%}"></script>
+    <!--===============================================================================================-->
+	<script src="{% static 'vendor/jquery/jquery-3.2.1.min.js' %}"></script>
+  <!--===============================================================================================-->
+    <script src="{% static 'vendor/animsition/js/animsition.min.js'%}"></script>
+  <!--===============================================================================================-->
+    <script src="{% static 'vendor/bootstrap/js/popper.js'%}"></script>
+    <script src="{% static 'vendor/bootstrap/js/bootstrap.min.js'%}"></script>
+  <!--===============================================================================================-->
+    <script src="{% static 'vendor/select2/select2.min.js'%}"></script>
+  <!--===============================================================================================-->
+    <script src="{% static 'vendor/daterangepicker/moment.min.js'%}"></script>
+    <script src="{% static 'vendor/daterangepicker/daterangepicker.js'%}"></script>
+  <!--===============================================================================================-->
+    <script src="{% static 'vendor/countdowntime/countdowntime.js'%}"></script>
+  <!--===============================================================================================-->
+    <script src="{% static 'js/map-custom.js'%}"></script>
+  <!--===============================================================================================-->
+    <script src="{% static 'js/main.js'%}"></script>
+  
+  
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-23581568-13"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+  
+    gtag('config', 'UA-23581568-13');
+  </script>
+
+  </body>
+
+</html>

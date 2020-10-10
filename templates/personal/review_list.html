@@ -1,0 +1,31 @@
+{% extends "personal/index.html" %}
+
+{% block display %}
+<h2>Reviews List</h2>
+<br>
+    <table class="table">
+        <thead>
+        <tr>
+            <th>Product</th>
+            <th>Rating</th>
+            <th>Title</th>
+            <th>Reviewer</th>
+            <th>Text</th>
+            <th>Class</th>
+        </tr>
+        </thead>
+        <tbody>
+            {% for review in reviews %}
+            <tr>
+                <td >{{ review.product_name }}</td>
+                <td >{{ review.rating }}</td>
+                <td >{{ review.title }}</td>
+                <td >{{ review.reviewer }}</td>
+                <td >{{ review.review_text }}</td>
+                <td >{{ review.Class }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+    <a href="{% url 'data_upload' %}"><button class="btn btn-md btn-outline-primary btn-block" id="load" style="width: 140px"> Return </button>
+{% endblock %}
