@@ -1,6 +1,7 @@
 from django.http import HttpResponseRedirect
 from django.shortcuts import render
 import csv, io
+from django.contrib import messages
 # Create your views here.
 from personal.models import Sentence, NameForm
 from personal.models import Reviews
