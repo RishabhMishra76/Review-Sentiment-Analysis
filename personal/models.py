@@ -17,9 +17,14 @@ class Reviews(models.Model):
     title = models.CharField(max_length=50)
     reviewer = models.CharField(max_length=150)
     review_text = models.CharField(max_length=250)
+    slug = models.SlugField(null=True, blank=True)
     Class = models.TextField()
     def __str__(self):
         return self.product_name
+    def save(self, *args, **kwargs):
+        if not self.id:
+            self.slug = slugify(self.product_name)
+        super(Gadget, self).save(*args, **kwargs)
 
 class Sentence(models.Model):
 
